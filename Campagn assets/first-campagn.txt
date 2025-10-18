@@ -1,3 +1,20 @@
+kingdom of: Tylos
+city of:
+
+guild: Stout shields
+guide: Milos
+
+starter kit:
+torch
+10 contract sets (binding between the adventurer, quest giver and the guild so to reduce swindle)
+5 divine danger scrolls (takes 1 minute)
+3 discover weakness (bonus action takes action to give results)
+3 discover strengts (bonus action takes action to give results)
+2 Locate Creature scrolls 
+1 crumbling stone wall (creates a stone wall that seal a 5x5 space between 4 surfaces that crumbles after 1 minute or when it has taken 50 dmg.
+
+jh pupet hp 14, ac 13.
+
 
 The party starts in a kingdom that has very recently defeated the recently returned "lich king", defeated, but not destroyed, merely banished. He had on himself a black orb, within which he has hid. The mechanisms are unknown but in the past thought this he returned 4 years after his defeat, and is now expected he would be doing the same again. 6 years ago he was defeated originally and people believed it was over, the orb was considered a trophy and put on display. thought it he came back 7 years ago, so this time the kingdom sought to destroy the orb instead. but to no avail, it proved to be indestructible but any means they possessed. The kingdom has announced that it seeks people now not for its destruction, but rather, to throw it of the face of the world. This is where the party comes in, tasked with the burden of carrying this orb to the end of the world, to throw it of the edge, and thus finally defeat the lich king.
 
