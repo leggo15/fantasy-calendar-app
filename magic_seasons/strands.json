@@ -1,0 +1,316 @@
+{
+    "1": {
+      "Name": "Fire",
+      "Hidden": "No",
+      "Description": "When the Strand of Fire rules the sky, forge-fires roar as if bellows work themselves and even the timid feel the call of rising flame.",
+      "Low_Effect": "Fire deal +1 die. \nfire creatures gain +1 damage.",
+      "Mid_Effect": "Fire spells die size increases one step. \nfire creatures gain +1 AC and +2 damage.",
+      "High_Effect": "Fire spells are cast one level higher and ignore resistance. \nfire creatures gain +2 AC and +5 damage, and become common."
+    },
+    "2": {
+      "Name": "Poison",
+      "Hidden": "No",
+      "Description": "Alchemists clutch their antidotes: a single drop can fell an ox, and the marshes hiss with viridian mist.",
+      "Low_Effect": "Poison damage rolls deal +1 die. \ncreatures suffer -1 on saving throws against poison.",
+      "Mid_Effect": "Poison damage die size increases one step. \nvenomous beasts gain +1 AC and +1 attack.",
+      "High_Effect": "Poison spells are cast one level higher and ignore resistance. \nplagues spread swiftly and venomous swarms gather."
+    },
+    "3": {
+      "Name": "Steam",
+      "Hidden": "No",
+      "Description": "Kettles scream, bathhouses vanish in fog, and geysers burst where none stood before.",
+      "Low_Effect": "Fog- or mist-creating spells cover +5 ft radius. \nfire or water spells that create steam deal +1 die.",
+      "Mid_Effect": "Misty terrain counts as lightly obscured. \nsteam mephits gain +1 AC and +1 attack.",
+      "High_Effect": "Mist or steam spells are cast one level higher. \nvision beyond 60 ft in heavy mist is impossible without magic. \nThere is a global mist cover"
+    },
+    "4": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "5": {
+      "Name": "Momentum",
+      "Hidden": "No",
+      "Description": "Sages say the world tilts on hidden gears this week; weights grow fickle and a single push can send wagons skidding for furlongs.",
+      "Low_Effect": "Levitation, jump and feather-fall last twice as long. Two handed weaponds deal +1dmg. \ngrapple and shove checks gain +1.",
+      "Mid_Effect": "Forced movement increases by 5 ft. Two handed weaponds deal +1die. \nfall damage is reduced by 1 die.",
+      "High_Effect": "Mass-altering spells are cast one level higher and double duration. \nfall damage is halved worldwide."
+    },
+    "6": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "7": {
+      "Name": "Fate",
+      "Hidden": "Yes",
+      "Description": "Oracles hear dice rattle in the sky; every choice feels balanced on a hair.",
+      "Low_Effect": "Portent dice gain +1. \n Creatures may reroll one missed attack per long rest.",
+      "Mid_Effect": "Future-glimpsing spells die size increases one step or answer one extra question. \n Creatures add +1d4 to a failed save once per short rest.",
+      "High_Effect": "Fate-bending spells are cast one level higher and ignore resistance. \ncritical hits occres on one extra number down."
+    },
+    "8": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "9": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "10": {
+      "Name": "Metal",
+      "Hidden": "No",
+      "Description": "The air rings like a distant anvil; ore smelts cleaner, and smiths claim their hammers strike true without their guiding hand.",
+      "Low_Effect": "Tool checks to work metal have advantage. \nmetal golems gain +1 AC.",
+      "Mid_Effect": "Metalworking time halves and produces masterwork quality. \nmetal golems gain +2 AC and +1 damage.",
+      "High_Effect": "Metal weapons or armour forged this week count as +1 magic. \nmetal golems gain +3 AC and +2 damage."
+    },
+    "11": {
+      "Name": "Earth",
+      "Hidden": "No",
+      "Description": "Mountains seem to breathe; deep roots stir and miners swear they can feel the stone listening to their picks.",
+      "Low_Effect": "Earth or stone spells deal +1 die. \nburrowing or stone creatures gain +1 AC.",
+      "Mid_Effect": "Earth or stone spells die size increases one step. \nstone golems gain +2 AC and +1 damage.",
+      "High_Effect": "Earth or stone spells are cast one level higher and ignore resistance. \nstone creatures appear more often."
+    },
+    "12": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "13": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "14": {
+      "Name": "Echo",
+      "Hidden": "No",
+      "Description": "Whisper in a vault this week and the walls answer back; tavern songs carry for miles on still air.",
+      "Low_Effect": "Bardic Inspiration die size increases one step. \\Sonic spells deal +1 die.",
+      "Mid_Effect": "Sonic spells force disadvantage. \nbards regain one expended inspiration die on a short rest.",
+      "High_Effect": "Verbal-component spells may be cast as bonus actions if spoken twice. \nsound elementals roam caverns."
+    },
+    "15": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "16": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "17": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "18": {
+      "Name": "Arcana",
+      "Hidden": "No",
+      "Description": "Raw magic crackles like wildfire; even lanterns spark with colored wisps.",
+      "Low_Effect": "Magical and Spell attack rolls gain +1 to hit. \nwizards recover one extra slot on arcane recovery.",
+      "Mid_Effect": "Magical damage die size increases one step. \nscroll-crafting time halves.",
+      "High_Effect": "Spells cast with their highest available slot count as one level higher. \nwild surges possible on spells 6th level or higher."
+    },
+    "19": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "20": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "21": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "22": {
+      "Name": "Lightning",
+      "Hidden": "No",
+      "Description": "Cloud-herders report storms that herd themselves, and children's hair stands on end even under clear skies.",
+      "Low_Effect": "Lightning & thunder spells deal +1 die. \nranged metal ammunition gains minor shock damage.",
+      "Mid_Effect": "Lightning & thunder spells die size increases one step. \ncreatures that fly or wear metal have -1 AC.",
+      "High_Effect": "Lightning spells are cast one level higher and ignore resistance. \nstorm elementals become common."
+    },
+    "23": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "24": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "25": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "26": {
+      "Name": "Glass",
+      "Hidden": "No",
+      "Description": "Sunlight prisms through every windowpane, and shards hum with pent-up resonance.",
+      "Low_Effect": "Shield spell grants +6 AC if cast with a mirror or crystal focus; piercing weapons deal +1 dmg. Armour made looses -1 AC.",
+      "Mid_Effect": "Creatures attacking through glass have advantage; shatter's radius +5 ft; piercing weapons deal +1 die. Armour made looses -2 AC.",
+      "High_Effect": "Any spell cast through a lens or mirror counts as one level higher; glass mephits roam city rooftops. Armour made looses -3 AC."
+    },
+    "27": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "28": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "29": {
+      "Name": "Clockwork",
+      "Hidden": "No",
+      "Description": "Every street-clock ticks in perfect unison and unattended gears clack into patterns too intricate for mortal hands.",
+      "Low_Effect": "Mechanical crafting time halves. \nanimated objects gain +10 ft speed.",
+      "Mid_Effect": "Haste's extra action can be used for any one-handed weapon attack. \nconstructs heal 1 HP each round.",
+      "High_Effect": "New minor constructs spontaneously assemble in workshops. \nartificer infusions last one extra day per level."
+    },
+    "30": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "31": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "32": {
+      "Name": "Growth",
+      "Hidden": "No",
+      "Description": "Seeds sprout overnight and ivy creeps so fast you can see it climb; shepherds swear lambs grow a week in a single day.",
+      "Low_Effect": "Nature spells heal or deal +1 die. \nanimals and plant creatures gain +1 attack.",
+      "Mid_Effect": "Nature spells die size increases one step. \nbeasts and plants gain +1 AC and +1 attack.",
+      "High_Effect": "Nature spells cast one level higher and ignore resistance. \nbeasts and plants flourish and gather in greater numbers."
+    },
+    "33": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "34": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "35": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "36": {
+      "Name": "Silence",
+      "Hidden": "No",
+      "Description": "Footfalls fade, speech feels muffled, and even thunder is swallowed at the horizon.",
+      "Low_Effect": "Stealth checks gain +1d4; verbal-component spells take +1 action unless whispered.",
+      "Mid_Effect": "Silence spell radius +10 ft; creatures have disadvantage to locate targets by sound.",
+      "High_Effect": "Verbal-component spells fail unless cast in magical silence; shadow-silent stalkers emerge in the hush."
+    },
+    "37": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "38": {
+      "Name": "Serenity",
+      "Hidden": "No",
+      "Description": "A hush blankets battlefields; quarrelsome hearts find their anger cooled as temple bells sound softer and sweeter.",
+      "Low_Effect": "Healing spells add the caster's proficiency bonus. \ncreatures may spend an action to end the frightened condition on themselves.",
+      "Mid_Effect": "At combat start, creatures must pass a Wis save or cannot take the Attack action during round one. \nshort rests grant 1 temporary HP per Hit Die spent.",
+      "High_Effect": "Mass healing word gains +2 dice and removes one condition. \nfiends suffer disadvantage on rolls to frighten others."
+    },
+    "39": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "40": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "41": {
+      "Name": "Mirage",
+      "Hidden": "No",
+      "Description": "Roads shimmer with phantom oases; travelers share confessions with their own reflections.",
+      "Low_Effect": "Illusion spell DC increases by +1. \nhide checks in heat-haze gain +1d4.",
+      "Mid_Effect": "Illusion spells die size increases one step or affect one extra target. \nsaves to disbelieve illusions are at disadvantage.",
+      "High_Effect": "Illusion spells are cast one level higher and automatically sucseed agains non-magical sight. \nmirage creatures drift into markets."
+    },
+    "42": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "43": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "44": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "45": {
+      "Name": "Ice",
+      "Hidden": "No",
+      "Description": "Breath hangs silver even beside midsummer fires, and lakes chime like crystal under phantom frost.",
+      "Low_Effect": "Cold spells deal +1 die. \ncold creatures gain +1 AC.",
+      "Mid_Effect": "Cold spells die size increases one step. \ncold creatures gain +1 attack and +1 AC.",
+      "High_Effect": "Cold spells are cast one level higher and ignore resistance. \ncold elementals become common."
+    },
+    "46": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "47": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "48": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "49": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "50": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "51": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "52": {
+      "Name": "Chaos",
+      "Hidden": "No",
+      "Description": "Street dice tumble on their own and candles burn backward; diviners pack up shop until the madness passes.",
+      "Low_Effect": "Sorcerers roll on the Wild-Magic table only on a 2; rolling a 1 triggers two results. \nonce per day, a random cantrip replaces an expended 1st-level slot.",
+      "Mid_Effect": "When up-casting, on a 6 (1d6) a random metamagic effect is free. \nchaos spells deal +1 die.",
+      "High_Effect": "Each dawn roll on a Chaos Events table. \nslaadi eggs hatch instantly and reality flickers."
+    },
+    "53": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "54": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "55": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "56": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "57": {
+      "Name": "Dreams",
+      "Hidden": "No",
+      "Description": "Sleepwalkers tread moonlit roads, murmuring secrets; some wake with stardust on their boots.",
+      "Low_Effect": "Sleep spells affect +1 die HD. \na short rest grants a cryptic omen.",
+      "Mid_Effect": "Divination cast while resting needs no material component. \ncreatures woken suddenly roll initiative at disadvantage.",
+      "High_Effect": "Sleeping creatures are treated as on the Ethereal Plane for magic. \nnight-hags and dream predators become common."
+    },
+    "58": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "59": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "60": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "61": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "62": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "63": {
+      "Name": "Shadow",
+      "Hidden": "No",
+      "Description": "Lantern-flames gutter low and every alley seems to stretch a mile deeper than memory swears it should. This is a time where all turn the lights low.",
+      "Low_Effect": "Darkvision range doubles. \nStealth checks in dim light gain +1d4.",
+      "Mid_Effect": "Darkness created this week counts as magical. \nshadow-step abilities recharge on a short rest.",
+      "High_Effect": "Necrotic spells ignore resistance. \nIn the pressance of strong light(none sun light), shadows peel off walls as hostile creatures."
+    },
+    "64": {
+      "Name": "Tempest",
+      "Hidden": "No",
+      "Description": "Wind lashes rain sideways; gusts strong enough to topple signposts burst from clear skies, Sailers stay ashore.",
+      "Low_Effect": "Wind or weather spells deal +1 die or push +5 ft further. \nflying creatures suffer –1 AC in open air.",
+      "Mid_Effect": "Wind spells die size increases one step. \nranged weapon attacks take –1 to hit outdoors.",
+      "High_Effect": "Weather-control spells are cast one level higher and ignore resistance. \nair elementals spawn amid whirlwinds."
+    },
+    "65": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "66": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "67": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "68": {
+      "Name": "Reflection",
+      "Hidden": "No",
+      "Description": "Mirrors mist over with images a heartbeat late and puddles show skies no eye has seen since the world was young.",
+      "Low_Effect": "Shield grants +6 AC. \nmirror image conjures one extra duplicate.",
+      "Mid_Effect": "If a ranged attack misses you, it has a 1d6 chanse to rebound at the attacker for half damage. \nillusion saves are made at disadvantage.",
+      "High_Effect": "Counterspell automatically succeeds against spells of 5th level or lower. \nglass spirits and mirror oozes wander city streets."
+    },
+    "69": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "70": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "71": {
+      "Name": "Blood",
+      "Hidden": "No",
+      "Description": "Wells run warm and every heartbeat drums like war-chant; healers taste iron on the wind.",
+      "Low_Effect": "Self-sacrifice: Spend 1 hit dice to add +1d4+1 damage or healing after hit for 8 hours. \n Heal 1 hp on hit.",
+      "Mid_Effect": "Self-sacrifice: Spend 1 hit dice to add +2d4+2 damage or healing after hit for 8 hours. \ncreatures at 0 HP make death saves at disadvantage.",
+      "High_Effect": "Self-sacrifice: Spend 2 hit dice to power a spell two levels higher. \nvampires regenerate even in sunlight."
+    },
+    "72": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "73": {
+      "Name": "Silk",
+      "Hidden": "No",
+      "Description": "Courtiers glide like dancers; even brawlers find their strikes curiously graceful.",
+      "Low_Effect": "Charm spells DC +1. \nPersuasion checks gain +1d4.",
+      "Mid_Effect": "Charm spells die size increases one step or affect one extra target. \nattacks of opportunity against allies are at disadvantage.",
+      "High_Effect": "Charm and compulsion spells are cast one level higher and ignore resistance. \nPersuasion checks gain +2d4."
+    },
+    "74": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "75": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "76": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "77": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "78": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "79": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "80": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "81": { 
+        "Name": "Undeath", 
+        "Hidden": "Yes",
+        "Description": "Gravedirt stirs, clocks pause at midnight and ravens learn new words to whisper at windowsills.",
+        "Low_Effect": "Necromancy spells deal +1 die. \nundead appear slightly more often.",
+        "Mid_Effect": "Necromancy spells die size increases one step. \nundead gain +1 AC and healing magic is reduced by one die.",
+        "High_Effect": "Necromancy, Reanimation and revival spells are cast one level higher, necrotic resistance is ignored. \nundead are empowered and common; healing spells suffer -2 dice."
+    },   
+    "82": {
+      "Name": "Rot",
+      "Hidden": "No",
+      "Description": "Fruit browns on the branch and carrion beetles darken the sky.",
+      "Low_Effect": "Necrotic spells deal +1 die. \nnonmagical food spoils twice as fast.",
+      "Mid_Effect": "Necrotic spells die size increases one step. \nsaving throws vs disease are at disadvantage.",
+      "High_Effect": "Necrotic spells are cast one level higher and ignore resistance. \nblights multiply in sewers and cellars."
+    },
+    "83": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "84": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "85": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "86": {
+      "Name": "Spirit",
+      "Hidden": "No",
+      "Description": "Ancestral voices whisper in hearth-fires and offerings vanish before hands withdraw.",
+      "Low_Effect": "Spirit-summoning or speaking spells last +5 min or deal +1 die. \nundead gain +1 attack.",
+      "Mid_Effect": "Spirit spells die size increases one step. \nundead saves against turning are at disadvantage.",
+      "High_Effect": "Spirit spells are cast one level higher and ignore resistance. \nancestor shades openly guard their bloodlines."
+    },
+    "87": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "88": {
+      "Name": "Sight",
+      "Hidden": "No",
+      "Description": "Seers blink amber and claim to read yesterday's footprints; even common folk speak truths they could not know.",
+      "Low_Effect": "Divination spells range increases by 30 ft. \nstudy checks gain +1 die.",
+      "Mid_Effect": "Divination spells die size increases one step. \nPerception and Investigation checks gain advantage.",
+      "High_Effect": "Divination spells are cast one level higher and ignore concentration. \nstudy checks automatically succeed on DC 15 or lower."
+    },
+    "89": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "90": {
+      "Name": "Radiance",
+      "Hidden": "No",
+      "Description": "Dawn breaks brilliant white-gold and shadows flee screaming; bells toll with crystal clarity heard leagues away.",
+      "Low_Effect": "Light and daylight spells impose disadvantage on undead attacks. \nundead in bright light take 1 radiant damage at turn start.",
+      "Mid_Effect": "Radiant spells heal the caster for half the radiant damage dealt once per turn. \nhealing spells gain +1 die in direct sunlight.",
+      "High_Effect": "Sunbeam and sunburst are cast one level higher and ignore resistance. \nundead in sunlight suffer -2 on all rolls."
+    },
+    "91": {
+      "Name": "Valor",
+      "Hidden": "No",
+      "Description": "Drums pound in hearts and ballads spring unbidden from every tongue.",
+      "Low_Effect": "Allies gain +1 temporary HP at dawn. \nfear saves have advantage.",
+      "Mid_Effect": "Inspiring spells die size increases one step or duration doubles. \nallies add +1 to attack rolls while within 10 ft of each other.",
+      "High_Effect": "Heroism becomes an area effect of 50ft that lasts 1 hour. \nallies who drop to 0 HP rise at 1 HP once per day."
+    },
+    "92": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "93": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "94": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "95": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "96": {
+      "Name": "Travel",
+      "Hidden": "No",
+      "Description": "Road-markers shift closer together, horses find second wind and door-arches sometimes open onto places they never have before.",
+      "Low_Effect": "Teleportation and speed spells increase range by 25 %. \ncreatures' dash speed increases by 5 ft.",
+      "Mid_Effect": "Travel spells die size increases one step or range by 50 %. \ncreatures' base speed increases by 10 ft.",
+      "High_Effect": "Travel spells are cast one level higher and ignore teleport mishap. \ncreatures' base speed increases by 15 ft and teleportation arrives unerringly."
+    }
+  }
+  
