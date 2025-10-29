@@ -2000,22 +2000,6 @@
     "party": "",
     "events": []
   },
-  "111929": {
-    "party": "",
-    "events": [
-      {
-        "name": "Banichment of the Lich King",
-        "desc": "The first Banichment of the Lich king happened on this day in the Panal fields.",
-        "rule": "one",
-        "y": 306,
-        "m": 5,
-        "d": 12,
-        "sid": 54,
-        "season": "Spring",
-        "mseason": "Mid"
-      }
-    ]
-  },
   "111928": {
     "party": "",
     "events": []
@@ -2355,5 +2339,245 @@
   "113526": {
     "party": "",
     "events": []
+  },
+  "110772": {
+    "party": "",
+    "events": []
+  },
+  "110771": {
+    "party": "",
+    "events": []
+  },
+  "110770": {
+    "party": "",
+    "events": []
+  },
+  "110769": {
+    "party": "",
+    "events": []
+  },
+  "110767": {
+    "party": "",
+    "events": []
+  },
+  "110766": {
+    "party": "",
+    "events": []
+  },
+  "110768": {
+    "party": "",
+    "events": [
+      {
+        "name": "Arrival of the Lich King",
+        "desc": "At this day the Lich of Tenra first appeared in the Tenraian Country side.",
+        "rule": "one",
+        "y": 303,
+        "m": 3,
+        "d": 8,
+        "sid": 81,
+        "season": "Spring",
+        "mseason": "High"
+      }
+    ]
+  },
+  "111568": {
+    "party": "",
+    "events": []
+  },
+  "111569": {
+    "party": "",
+    "events": []
+  },
+  "111599": {
+    "party": "",
+    "events": []
+  },
+  "111629": {
+    "party": "",
+    "events": []
+  },
+  "111659": {
+    "party": "",
+    "events": []
+  },
+  "111689": {
+    "party": "",
+    "events": []
+  },
+  "111719": {
+    "party": "",
+    "events": []
+  },
+  "111749": {
+    "party": "",
+    "events": []
+  },
+  "111779": {
+    "party": "",
+    "events": []
+  },
+  "111786": {
+    "party": "",
+    "events": []
+  },
+  "111793": {
+    "party": "",
+    "events": []
+  },
+  "111800": {
+    "party": "",
+    "events": []
+  },
+  "111807": {
+    "party": "",
+    "events": []
+  },
+  "111814": {
+    "party": "",
+    "events": []
+  },
+  "111821": {
+    "party": "",
+    "events": []
+  },
+  "111828": {
+    "party": "",
+    "events": []
+  },
+  "111835": {
+    "party": "",
+    "events": []
+  },
+  "111842": {
+    "party": "",
+    "events": []
+  },
+  "111849": {
+    "party": "",
+    "events": []
+  },
+  "111856": {
+    "party": "",
+    "events": []
+  },
+  "111863": {
+    "party": "",
+    "events": []
+  },
+  "111870": {
+    "party": "",
+    "events": []
+  },
+  "111877": {
+    "party": "",
+    "events": []
+  },
+  "111884": {
+    "party": "",
+    "events": []
+  },
+  "111898": {
+    "party": "",
+    "events": []
+  },
+  "111905": {
+    "party": "",
+    "events": []
+  },
+  "111912": {
+    "party": "",
+    "events": []
+  },
+  "111919": {
+    "party": "",
+    "events": []
+  },
+  "111926": {
+    "party": "",
+    "events": []
+  },
+  "112017": {
+    "party": "",
+    "events": []
+  },
+  "112018": {
+    "party": "",
+    "events": []
+  },
+  "112020": {
+    "party": "",
+    "events": []
+  },
+  "112021": {
+    "party": "",
+    "events": []
+  },
+  "112022": {
+    "party": "",
+    "events": []
+  },
+  "112023": {
+    "party": "",
+    "events": []
+  },
+  "112024": {
+    "party": "",
+    "events": []
+  },
+  "112025": {
+    "party": "",
+    "events": []
+  },
+  "112026": {
+    "party": "",
+    "events": []
+  },
+  "112027": {
+    "party": "",
+    "events": []
+  },
+  "112028": {
+    "party": "",
+    "events": []
+  },
+  "112016": {
+    "party": "",
+    "events": []
+  },
+  "112015": {
+    "party": "",
+    "events": []
+  },
+  "112014": {
+    "party": "",
+    "events": []
+  },
+  "112013": {
+    "party": "",
+    "events": []
+  },
+  "112012": {
+    "party": "",
+    "events": []
+  },
+  "111925": {
+    "party": "",
+    "events": []
+  },
+  "111929": {
+    "party": "",
+    "events": [
+      {
+        "name": "First Banishment of the Lich King",
+        "desc": "At this day, the Lich of Tenra was vanquished for the first time during the Siege of Vanorio.",
+        "rule": "one",
+        "y": 306,
+        "m": 5,
+        "d": 12,
+        "sid": 54,
+        "season": "Spring",
+        "mseason": "Mid"
+      }
+    ]
   }
 }

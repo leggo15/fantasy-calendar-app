@@ -6,8 +6,8 @@ import textwrap
 
 # ───────── CONFIG ─────────
 DAYS_IN_WEEK = 7
-STRANDS_FILE = r"C:\Projects\DND_tools\player-calendar-wheel\public\strands.json"
-NOTES_FILE   = r"C:\Projects\DND_tools\player-calendar-wheel\public\day_notes.json"
+STRANDS_FILE = r"C:\Projects\DND-tools\fantasy-calendar-app\player-calendar-wheel\public\strands.json"
+NOTES_FILE   = r"C:\Projects\DND-tools\fantasy-calendar-app\player-calendar-wheel\public\day_notes.json"
 BASE_MONTH_LENGTHS   = [31,28,31,30,31,30,31,31,30,31,30,31]
 DAYS_IN_MAGIC_SEASON = 59
 SEASONS       = ["Winter","Spring","Summer","Fall"]
@@ -23,8 +23,8 @@ def month_lengths_for(y):
 
 # ───────── CORE MODEL ─────
 class FantasyCalendar:
-    STATE_FILE = r"C:\Projects\DND_tools\player-calendar-wheel\public\current_date.txt"
-    HOUR_FILE  = r"C:\Projects\DND_tools\player-calendar-wheel\public\current_hour.txt"
+    STATE_FILE = r"C:\Projects\DND-tools\fantasy-calendar-app\player-calendar-wheel\public\current_date.txt"
+    HOUR_FILE  = r"C:\Projects\DND-tools\fantasy-calendar-app\player-calendar-wheel\public\current_hour.txt"
 
     def __init__(self):
         self.months=["January","February","March","April","May","June",

@@ -18,7 +18,7 @@ Magic Seasons:
 
 There are 12 regular months, maintaining a traditional yearly cycle for agriculture, holidays, etc.
 
-Magic strength follows a 3-season(each 71 months long) "gravitational cycle" that is offset and drifts relative to the 12-month calendar.
+Magic strength follows a 3-season(each 71 days long) "gravitational cycle" that is offset and drifts relative to the 12-month calendar.
 
 This gravitational cycle is tied to the black hole's spin dragging time-space around it creating folds of varying depth.
 
@@ -30,6 +30,8 @@ Example of a Date
 
 October 25th Low fall, Fire Strand Of the year 1121. 
 This would mean magic as a whole is pretty weak this season but fire based magic has an edge compared to everything else.
+
+The skies of this world is filled with other "shards" that to us would look like very bright blinking stars, these move fairly fast and can cross horizon to horizon in a couple of days to a month or two and return annually. The night sky looks like someone sprinkled glitter all over it. These "stars" are some times used to predict the arrival of a strand or can be associated with some god or entity of worship. 
 
 
 It is important to note about the view from within the world:
