@@ -8,6 +8,7 @@ import textwrap
 DAYS_IN_WEEK = 7
 STRANDS_FILE = r"C:\Projects\DND-tools\fantasy-calendar-app\player-calendar-wheel\public\strands.json"
 NOTES_FILE   = r"C:\Projects\DND-tools\fantasy-calendar-app\player-calendar-wheel\public\day_notes.json"
+SAVED_DATES_FILE = r"C:\Projects\DND-tools\fantasy-calendar-app\magic_seasons\saved_dates.json"
 BASE_MONTH_LENGTHS   = [31,28,31,30,31,30,31,31,30,31,30,31]
 DAYS_IN_MAGIC_SEASON = 59
 SEASONS       = ["Winter","Spring","Summer","Fall"]
@@ -26,14 +27,29 @@ class FantasyCalendar:
     STATE_FILE = r"C:\Projects\DND-tools\fantasy-calendar-app\player-calendar-wheel\public\current_date.txt"
     HOUR_FILE  = r"C:\Projects\DND-tools\fantasy-calendar-app\player-calendar-wheel\public\current_hour.txt"
 
+    """
+    extbf{Silence} God: The Silent Watcher.               (January)
+    extbf{Khord} God: Khord.                              (February)
+    extbf{Maiden's Blight} God: Maid of Calamity.         (April)
+    extbf{Ortide} God: Orn.                               (March)
+    extbf{Verenin} God: Vereya.                           (May)
+    extbf{Song} God: Lady in Song.                        (June)
+    extbf{Grishleaf} God: Grisha.                         (July)
+    extbf{Solian} God: Lord of Light.                     (August)
+    extbf{Marthos} God: Marthus.                          (September)
+    extbf{Illumi} God: Kairus.                            (October)
+    extbf{Restos} God: The one below the dirt.            (November)
+    extbf{Veil} God: Lord of Mysteries.                   (December)
+    """
+
+
     def __init__(self):
-        self.months=["January","February","March","April","May","June",
-                     "July","August","September","October","November","December"]
-        
+        self.months=["Silence","Khord","Maiden's Blight","Ortide","Verenin","Song","Grishleaf","Solian","Marthos","Illumi","Restos","Veil"]
         self.magic_seasons=MAGIC_SEASONS
         self.seasons=SEASONS
         self._load_strands()
         self._load_notes()
+        self._load_saved_dates()
         self.total_days = self._load_state()
         self.current_hour = self._load_hour()
 
@@ -56,6 +72,41 @@ class FantasyCalendar:
 
     def _save_notes(self):
         json.dump(self.notes, open(self._notes_path,"w",encoding="utf-8"), indent=2, ensure_ascii=False)
+
+    # ----- saved dates -----
+    def _load_saved_dates(self):
+        self.saved_dates, self._saved_dates_path = self._load_json(SAVED_DATES_FILE, {})
+
+    def _save_saved_dates(self):
+        json.dump(self.saved_dates, open(self._saved_dates_path,"w",encoding="utf-8"), indent=2, ensure_ascii=False)
+
+    def save_named_date(self, name):
+        comp = self._comp()
+        # store both components and absolute day index for robustness
+        self.saved_dates[name] = {
+            "y": comp["year"],
+            "m": comp["month"],   # 0-based month in internal model
+            "d": comp["day"],     # 1-based day
+            "total_days": self.total_days
+        }
+        self._save_saved_dates()
+
+    def get_saved_names(self):
+        return list(self.saved_dates.keys())
+
+    def goto_saved_date(self, name):
+        data = self.saved_dates.get(name)
+        if not data:
+            return False
+        # Prefer exact stored total_days; fall back to recompute from y/m/d
+        td = data.get("total_days")
+        if isinstance(td, int):
+            self.total_days = td
+        else:
+            self.set_date(data["y"], data["m"]+1, data["d"])  # month expected 1-12
+            return True
+        open(self.STATE_FILE,"w").write(str(self.total_days))
+        return True
 
     # ----- entry -----    
     def _key(self,off=0):
@@ -220,6 +271,26 @@ class FantasyCalendar:
         self.total_days += d
         open(self.STATE_FILE,"w").write(str(self.total_days))
 
+    def set_date(self, year, month_1_based, day_1_based):
+        # Clamp and validate month/day with leap-years
+        if month_1_based < 1 or month_1_based > 12:
+            raise ValueError("Month must be 1..12")
+        ml = month_lengths_for(year)
+        maxd = ml[month_1_based-1]
+        if day_1_based < 1 or day_1_based > maxd:
+            raise ValueError(f"Day must be 1..{maxd} for month {month_1_based} in year {year}")
+        # compute absolute day index from epoch year 0, month 0
+        total = 0
+        y = 0
+        while y < year:
+            total += year_length(y)
+            y += 1
+        for m in range(0, month_1_based-1):
+            total += ml[m]
+        total += (day_1_based - 1)
+        self.total_days = total
+        open(self.STATE_FILE,"w").write(str(self.total_days))
+
     # ----- state (hours) -----    
     def _load_hour(self):
         try:
@@ -303,6 +374,26 @@ class CalendarApp(tk.Tk):
         self.notes_frame = ttk.Frame(self)
         self.notes_frame.grid(row=6, column=0, columnspan=4, sticky="ew", padx=10, pady=5)
 
+        # Jump/Save frame (row 7)
+        self.jump_frame = ttk.Frame(self)
+        self.jump_frame.grid(row=7, column=0, columnspan=4, sticky="ew", padx=10, pady=(0,8))
+        ttk.Label(self.jump_frame, text="Jump to:").pack(side="left", padx=(0,6))
+        ttk.Label(self.jump_frame, text="Year").pack(side="left")
+        self.year_ent = ttk.Entry(self.jump_frame, width=6)
+        self.year_ent.pack(side="left", padx=(2,8))
+        ttk.Label(self.jump_frame, text="Month").pack(side="left")
+        self.month_ent = ttk.Entry(self.jump_frame, width=4)
+        self.month_ent.pack(side="left", padx=(2,8))
+        ttk.Label(self.jump_frame, text="Day").pack(side="left")
+        self.day_ent = ttk.Entry(self.jump_frame, width=4)
+        self.day_ent.pack(side="left", padx=(2,8))
+        ttk.Button(self.jump_frame, text="Go", command=self.jump_to_date).pack(side="left", padx=(4,10))
+        ttk.Button(self.jump_frame, text="Save Date…", command=self.save_date_dialog).pack(side="left", padx=(0,10))
+        ttk.Label(self.jump_frame, text="Saved:").pack(side="left")
+        self.saved_combo = ttk.Combobox(self.jump_frame, state="readonly", width=18, values=self.cal.get_saved_names())
+        self.saved_combo.bind("<<ComboboxSelected>>", self.on_saved_selected)
+        self.saved_combo.pack(side="left", padx=(4,0))
+
         self.refresh()
 
     # ----- move day/hour -----    
@@ -312,6 +403,54 @@ class CalendarApp(tk.Tk):
 
     def move_hour(self,h):
         self.cal.shift_hours(h)
+        self.refresh()
+
+    # ----- Jump / Save -----
+    def _update_jump_fields_from_current(self):
+        comp = self.cal._comp()
+        # update entries to reflect current date
+        try:
+            self.year_ent.delete(0,"end"); self.year_ent.insert(0, str(comp["year"]))
+            self.month_ent.delete(0,"end"); self.month_ent.insert(0, str(comp["month"]+1))
+            self.day_ent.delete(0,"end"); self.day_ent.insert(0, str(comp["day"]))
+        except Exception:
+            pass
+
+    def jump_to_date(self):
+        try:
+            y = int(self.year_ent.get().strip())
+            m = int(self.month_ent.get().strip())
+            d = int(self.day_ent.get().strip())
+        except Exception:
+            messagebox.showerror("Invalid", "Please enter numeric Year, Month, Day.", parent=self)
+            return
+        try:
+            self.cal.set_date(y, m, d)
+        except ValueError as e:
+            messagebox.showerror("Invalid date", str(e), parent=self)
+            return
+        self.refresh()
+
+    def save_date_dialog(self):
+        name = simpledialog.askstring("Save Date", "Name for this date:", parent=self)
+        if not name:
+            return
+        self.cal.save_named_date(name)
+        # refresh combobox
+        self.saved_combo["values"] = self.cal.get_saved_names()
+        try:
+            self.saved_combo.set(name)
+        except Exception:
+            pass
+
+    def on_saved_selected(self, e):
+        name = self.saved_combo.get()
+        if not name:
+            return
+        ok = self.cal.goto_saved_date(name)
+        if not ok:
+            messagebox.showerror("Missing", f"Saved date '{name}' not found.", parent=self)
+            return
         self.refresh()
 
     # ----- Party log -----    
@@ -429,6 +568,10 @@ class CalendarApp(tk.Tk):
         ttk.Button(dlg,text="Add",command=save).grid(row=9,column=3,sticky="e",pady=4)
 
     def edit_event_dlg(self,ev):
+        # Harden against malformed event payloads
+        if "__day" not in ev or "__idx" not in ev:
+            messagebox.showerror("Error","Unable to edit this event (missing reference).", parent=self)
+            return
         dlg=tk.Toplevel(self); dlg.title("Edit Event"); dlg.grab_set()
         ttk.Label(dlg,text="Name:").grid(row=0,column=0,sticky="w")
         name_ent=ttk.Entry(dlg,width=40)
@@ -444,7 +587,11 @@ class CalendarApp(tk.Tk):
             if not nm:
                 messagebox.showerror("Empty","Name required",parent=dlg)
                 return
-            self.cal.edit_event(ev["__day"],ev["__idx"],{"name":nm,"desc":ds})
+            try:
+                self.cal.edit_event(ev["__day"],ev["__idx"],{"name":nm,"desc":ds})
+            except Exception as ex:
+                messagebox.showerror("Error", f"Failed to save: {ex}", parent=dlg)
+                return
             dlg.destroy()
             self.refresh_notes()
 
@@ -548,6 +695,7 @@ class CalendarApp(tk.Tk):
         # update both date+hour labels and notes
         self.date_lbl.config(text=self.cal.format_date())
         self.hour_lbl.config(text=f"Current Hour: {self.cal.current_hour:02d}:00")
+        self._update_jump_fields_from_current()
         self.refresh_notes()
 
 if __name__=="__main__":

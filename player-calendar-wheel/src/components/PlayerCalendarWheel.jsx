@@ -4,18 +4,18 @@ import { useState, useMemo, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const MONTHS = [
-  { name: "January",      outer: "#323d5a", inner: "#6b717e" },
-  { name: "February",     outer: "#20757a", inner: "#406e95" },
-  { name: "March",  outer: "#68d9be", inner: "#649a99" },
-  { name: "April",   outer: "#47e05a", inner: "#86eec2" },
-  { name: "May",    outer: "#23a005", inner: "#65e047" },
-  { name: "June",     outer: "#bcff5b", inner: "#679b1c" },
-  { name: "July",     outer: "#f7ff00", inner: "#fffdd0" },
-  { name: "August",     outer: "#f2e02c", inner: "#ddeb00" },
-  { name: "September", outer: "#dfa500", inner: "#ffda7d" },
-  { name: "October",    outer: "#f3cf94", inner: "#ffb741" },
-  { name: "November",     outer: "#d6c7ae", inner: "#f1cd90" },
-  { name: "December",    outer: "#cdcdcd", inner: "#faf6ee" },
+  { name: "Silence",      outer: "#323d5a", inner: "#6b717e" },
+  { name: "Khord",     outer: "#20757a", inner: "#406e95" },
+  { name: "Maiden's Blight",   outer: "#47e05a", inner: "#86eec2" },
+  { name: "Ortide",  outer: "#68d9be", inner: "#649a99" },
+  { name: "Verenin",    outer: "#23a005", inner: "#65e047" },
+  { name: "Song",     outer: "#bcff5b", inner: "#679b1c" },
+  { name: "Grishleaf",     outer: "#f7ff00", inner: "#fffdd0" },
+  { name: "Solian",     outer: "#f2e02c", inner: "#ddeb00" },
+  { name: "Marthos", outer: "#dfa500", inner: "#ffda7d" },
+  { name: "Illumi",     outer: "#d6c7ae", inner: "#f1cd90" },
+  { name: "Restos",    outer: "#cdcdcd", inner: "#faf6ee" },
+  { name: "Veil",    outer: "#cdcdcd", inner: "#faf6ee" },
 ];
 
 const SEASONS = [
@@ -51,7 +51,7 @@ const isLeap     = (y) => y % 4 === 0;
 const yearLength = (y) => (isLeap(y) ? 366 : 365);
 const monthLens  = (y) => {
   const m = [...BASE_MONTH_LENGTHS];
-  if (isLeap(y)) m[2] = 29;
+  if (isLeap(y)) m[1] = 29;
   return m;
 };
 

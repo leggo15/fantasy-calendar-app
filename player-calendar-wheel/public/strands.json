@@ -3,7 +3,7 @@
     "Name": "Fire",
     "Hidden": "No",
     "Description": "When the Strand of Fire rules the sky, forge-fires roar as if bellows work themselves and even the timid feel the call of rising flame.",
-    "Low_Effect": "Fire deal +1 die. \nfire creatures gain +1 damage.",
+    "Low_Effect": "Fire deal +(number of die cast) on hit. \nfire creatures gain +1 damage.",
     "Mid_Effect": "Fire spells die size increases one step. \nfire creatures gain +1 AC and +2 damage.",
     "High_Effect": "Fire spells are cast one level higher and ignore resistance. \nfire creatures gain +2 AC and +5 damage, and become common.",
     "outer_color": "#FF4500",
