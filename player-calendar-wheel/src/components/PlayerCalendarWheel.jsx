@@ -179,7 +179,10 @@ const ringSegmentPath = (outer, inner, startDeg, endDeg) => {
 function useStrands() {
   const [map, set] = useState({});
   useEffect(() => {
-    fetch("/strands.json").then((r) => r.json()).then(set).catch(() => {});
+    fetch(`${ASSET_BASE}strands.json`)
+      .then((r) => r.json())
+      .then(set)
+      .catch(() => {});
   }, []);
   return map;
 }
