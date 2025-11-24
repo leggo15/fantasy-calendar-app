@@ -773,14 +773,14 @@ export default function PlayerCalendarWheel({
             className="px-4 py-1 rounded"
             style={BUTTON_BASE_STYLE}
           >
-            ⏮ Hour
+            ◀ Hour
           </button>
           <button
             onClick={() => bumpHour(1)}
             className="px-4 py-1 rounded"
             style={BUTTON_BASE_STYLE}
           >
-            Hour ⏭
+            Hour ▶
           </button>
         </div>
         <div
@@ -797,14 +797,14 @@ export default function PlayerCalendarWheel({
             className="px-4 py-1 rounded"
             style={BUTTON_BASE_STYLE}
           >
-            ◀ Day
+            ⏮ Day
           </button>
           <button
             onClick={() => bumpDay(1)}
             className="px-4 py-1 rounded"
             style={BUTTON_BASE_STYLE}
           >
-            Day ▶
+            Day ⏭
           </button>
         </div>
       </div>
