@@ -84,8 +84,12 @@ const LABEL_COLUMN_MARGIN = 18;
 const LABEL_HORIZONTAL_OFFSET = 0;
 
 const TIME_TEXT_OFFSET_Y = -275;
+const TIME_TEXT_OFFSET_X = 0;
 const DATE_TEXT_OFFSET_Y = 10;
+const DATE_TEXT_OFFSET_X = 0;
 const BUTTON_OFFSET_Y = 10;
+const BUTTON_OFFSET_X = 0;
+const JUMP_PANEL_OFFSET = { x: 0, y: 12 };
 const BUTTON_GAP = 8;
 const CENTER_LINE_EXTENSION = 20; // extra length added beyond wheel diameter
 const METAL_BORDER_COLOR = "#3d4249";
@@ -644,6 +648,7 @@ export default function PlayerCalendarWheel({
                 width={hubR * 2}
                 height={hubR * 2}
                 preserveAspectRatio="xMidYMid slice"
+                style={{ transform: 'scaleX(-1)' }}
               />
             </motion.g>
             <text
@@ -721,7 +726,12 @@ export default function PlayerCalendarWheel({
 
       <div
         className="text-center text-xl font-semibold"
-        style={{ ...TEXT_FRAME_STYLE, marginTop: TIME_TEXT_OFFSET_Y }}
+        style={{
+          ...TEXT_FRAME_STYLE,
+          marginTop: TIME_TEXT_OFFSET_Y,
+          marginLeft: TIME_TEXT_OFFSET_X,
+          marginRight: -TIME_TEXT_OFFSET_X,
+        }}
       >
         {`${String(hour).padStart(2, "0")}:00`}
       </div>
@@ -744,6 +754,8 @@ export default function PlayerCalendarWheel({
               ...TEXT_FRAME_STYLE,
               color: FONT_COLOUR,
               marginTop: DATE_TEXT_OFFSET_Y,
+              marginLeft: DATE_TEXT_OFFSET_X,
+              marginRight: -DATE_TEXT_OFFSET_X,
             }}
           >
             <div>
@@ -758,7 +770,11 @@ export default function PlayerCalendarWheel({
 
       <div
         className="text-center text-base"
-        style={{ marginTop: BUTTON_OFFSET_Y }}
+        style={{
+          marginTop: BUTTON_OFFSET_Y,
+          marginLeft: BUTTON_OFFSET_X,
+          marginRight: -BUTTON_OFFSET_X,
+        }}
       >
         <div
           className="flex"
