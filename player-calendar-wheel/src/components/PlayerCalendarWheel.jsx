@@ -271,6 +271,7 @@ export default function PlayerCalendarWheel({
   const prevHourRef = useRef(hour);
   const strands = useStrands();
   const prevStrandRef = useRef(null);
+  const rotationCache = useRef({});
   const clipId = useId();
   const clipPathId = `${clipId}-upper-half`;
   const [jumpYear, setJumpYear] = useState("");
@@ -469,7 +470,28 @@ export default function PlayerCalendarWheel({
     const strandStep = 360 / STRAND_VISIBLE;
     const strandInitial = strandDelta * strandStep;
     const motionKey = isStrand ? `strand-${date.strand}` : ring.key;
-    const targetRotation = isStrand ? 0 : rawRotation;
+    let targetRotation = 0;
+    if (isStrand) {
+      targetRotation = 0;
+    } else {
+      const cache = rotationCache.current[ring.key];
+      if (!cache || cache.segLen !== ring.segments.length) {
+        rotationCache.current[ring.key] = {
+          angle: rawRotation,
+          index: ring.currentIndex,
+          segLen: ring.segments.length,
+        };
+      } else if (cache.index !== ring.currentIndex) {
+        let diff = ring.currentIndex - cache.index;
+        const len = ring.segments.length;
+        if (diff > len / 2) diff -= len;
+        if (diff < -len / 2) diff += len;
+        cache.angle -= diff * step;
+        cache.index = ring.currentIndex;
+        cache.segLen = len;
+      }
+      targetRotation = rotationCache.current[ring.key].angle;
+    }
     return (
       <g key={ring.key} transform={`translate(${centre} ${centre})`}>
         <motion.g
