@@ -17,12 +17,12 @@ jobs:
         with:
           node-version: 20
       - run: npm install
-        working-directory: fantasy-calendar-app/player-calendar-wheel
+        working-directory: player-calendar-wheel
       - run: npm run build
-        working-directory: fantasy-calendar-app/player-calendar-wheel
+        working-directory: player-calendar-wheel
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: fantasy-calendar-app/player-calendar-wheel/dist
+          path: player-calendar-wheel/dist
 
   deploy:
     needs: build
