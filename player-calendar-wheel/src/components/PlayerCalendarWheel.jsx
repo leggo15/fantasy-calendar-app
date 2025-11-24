@@ -593,12 +593,20 @@ export default function PlayerCalendarWheel({
       className="relative w-full flex flex-col items-center gap-6 pb-16"
       style={{ fontFamily: FONT, color: FONT_COLOUR }}
     >
-      <svg
-        viewBox={`0 0 ${size} ${size}`}
-        width={size}
-        height={size * 0.85}
-        className="mx-auto select-none overflow-visible"
+      <div
+        style={{
+          position: "relative",
+          width: "100%",
+          maxWidth: size,
+          height: svgHeight,
+        }}
       >
+        <svg
+          viewBox={`0 0 ${size} ${size}`}
+          width={size}
+          height={svgHeight}
+          className="mx-auto select-none overflow-visible"
+        >
         <image
           href={BACKDROP_SRC}
           x={backdropX}
@@ -722,40 +730,31 @@ export default function PlayerCalendarWheel({
             </g>
           );
         })}
-      </svg>
+        </svg>
 
-      <div
-        className="text-center text-xl font-semibold"
-        style={{
-          ...TEXT_FRAME_STYLE,
-          marginTop: TIME_TEXT_OFFSET_Y,
-          marginLeft: TIME_TEXT_OFFSET_X,
-          marginRight: -TIME_TEXT_OFFSET_X,
-        }}
-      >
-        {`${String(hour).padStart(2, "0")}:00`}
-      </div>
+        <div
+          style={{
+            ...overlayStyle(TIME_TEXT_OFFSET_X, TIME_TEXT_OFFSET_Y),
+            pointerEvents: "none",
+          }}
+        >
+          <div style={{ ...TEXT_FRAME_STYLE, pointerEvents: "auto" }}>
+            {`${String(hour).padStart(2, "0")}:00`}
+          </div>
+        </div>
 
-      {(() => {
-        const strandLabel = strandName(date.strand + 1, strands) || "No Strand";
-        const strandLine =
-          strandLabel === "No Strand" ? (
-            <>No Strand · Year {date.year}</>
-          ) : (
-            <>
-              Strand of <span className="font-semibold">{strandLabel}</span>
-              {` · Year ${date.year}`}
-            </>
-          );
-        return (
+        <div
+          style={{
+            ...overlayStyle(DATE_TEXT_OFFSET_X, DATE_TEXT_OFFSET_Y),
+            pointerEvents: "none",
+          }}
+        >
           <div
-            className="text-center text-base"
             style={{
               ...TEXT_FRAME_STYLE,
               color: FONT_COLOUR,
-              marginTop: DATE_TEXT_OFFSET_Y,
-              marginLeft: DATE_TEXT_OFFSET_X,
-              marginRight: -DATE_TEXT_OFFSET_X,
+              pointerEvents: "auto",
+              textAlign: "center",
             }}
           >
             <div>
@@ -763,112 +762,149 @@ export default function PlayerCalendarWheel({
                 date.day
               )}, ${MAGIC_SEASONS[date.magic].name} ${SEASONS[date.season].name}`}
             </div>
-            <div>{strandLine}</div>
+            <div>
+              {strandName(date.strand + 1, strands) === "No Strand" ? (
+                <>No Strand · Year {date.year}</>
+              ) : (
+                <>
+                  Strand of{" "}
+                  <span className="font-semibold">
+                    {strandName(date.strand + 1, strands)}
+                  </span>
+                  {` · Year ${date.year}`}
+                </>
+              )}
+            </div>
           </div>
-        );
-      })()}
-
-      <div
-        className="text-center text-base"
-        style={{
-          marginTop: BUTTON_OFFSET_Y,
-          marginLeft: BUTTON_OFFSET_X,
-          marginRight: -BUTTON_OFFSET_X,
-        }}
-      >
-        <div
-          className="flex"
-          style={{
-            gap: BUTTON_GAP,
-            justifyContent: "center",
-            flexWrap: "wrap",
-          }}
-        >
-          <button
-            onClick={() => bumpHour(-1)}
-            className="px-4 py-1 rounded"
-            style={BUTTON_BASE_STYLE}
-          >
-            ⏮ Hour
-          </button>
-          <button
-            onClick={() => bumpHour(1)}
-            className="px-4 py-1 rounded"
-            style={BUTTON_BASE_STYLE}
-          >
-            Hour ⏭
-          </button>
         </div>
-        <div
-          className="flex"
-          style={{
-            gap: BUTTON_GAP,
-            justifyContent: "center",
-            flexWrap: "wrap",
-            marginTop: BUTTON_GAP / 2,
-          }}
-        >
-          <button
-            onClick={() => bumpDay(-1)}
-            className="px-4 py-1 rounded"
-            style={BUTTON_BASE_STYLE}
-          >
-            ◀ Day
-          </button>
-          <button
-            onClick={() => bumpDay(1)}
-            className="px-4 py-1 rounded"
-            style={BUTTON_BASE_STYLE}
-          >
-            Day ▶
-          </button>
-        </div>
-      </div>
 
-      <div
-        className="flex flex-wrap items-end justify-center"
-        style={{ marginTop: BUTTON_GAP, gap: BUTTON_GAP }}
-      >
-        <input
-          type="number"
-          placeholder="Year"
-          aria-label="Jump year"
-          value={jumpYear}
-          onChange={(e) => setJumpYear(e.target.value)}
-          style={{ ...INPUT_STYLE, width: 45 }}
-        />
-        <input
-          type="number"
-          placeholder="Month"
-          aria-label="Jump month"
-          min={1}
-          max={12}
-          value={jumpMonth}
-          onChange={(e) => setJumpMonth(e.target.value)}
-          style={{ ...INPUT_STYLE, width: 45 }}
-        />
-        <input
-          type="number"
-          placeholder="Day"
-          aria-label="Jump day"
-          min={1}
-          max={31}
-          value={jumpDay}
-          onChange={(e) => setJumpDay(e.target.value)}
-          style={{ ...INPUT_STYLE, width: 45 }}
-        />
-        <button
+        <div
           style={{
-            ...BUTTON_BASE_STYLE,
-            minWidth: 55,
-            height: 24,
-            padding: "0 4px",
-            fontSize: 12,
+            ...overlayStyle(BUTTON_OFFSET_X, BUTTON_OFFSET_Y),
+            pointerEvents: "none",
           }}
-          onClick={applyManualJump}
         >
-          Go
-        </button>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: BUTTON_GAP / 2,
+              alignItems: "center",
+              pointerEvents: "auto",
+            }}
+          >
+            <div
+              className="flex"
+              style={{ gap: BUTTON_GAP, justifyContent: "center", flexWrap: "wrap" }}
+            >
+              <button
+                onClick={() => bumpHour(-1)}
+                className="px-4 py-1 rounded"
+                style={BUTTON_BASE_STYLE}
+              >
+                ⏮ Hour
+              </button>
+              <button
+                onClick={() => bumpHour(1)}
+                className="px-4 py-1 rounded"
+                style={BUTTON_BASE_STYLE}
+              >
+                Hour ⏭
+              </button>
+            </div>
+            <div
+              className="flex"
+              style={{ gap: BUTTON_GAP, justifyContent: "center", flexWrap: "wrap" }}
+            >
+              <button
+                onClick={() => bumpDay(-1)}
+                className="px-4 py-1 rounded"
+                style={BUTTON_BASE_STYLE}
+              >
+                ◀ Day
+              </button>
+              <button
+                onClick={() => bumpDay(1)}
+                className="px-4 py-1 rounded"
+                style={BUTTON_BASE_STYLE}
+              >
+                Day ▶
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div
+          style={{
+            ...overlayStyle(JUMP_PANEL_OFFSET.x, JUMP_PANEL_OFFSET.y),
+            pointerEvents: "none",
+          }}
+        >
+          <div
+            style={{
+              ...TEXT_FRAME_STYLE,
+              pointerEvents: "auto",
+              display: "flex",
+              flexWrap: "wrap",
+              gap: BUTTON_GAP,
+              alignItems: "flex-end",
+              justifyContent: "center",
+              padding: "12px 18px",
+              maxWidth: Math.min(size * 0.7, 520),
+            }}
+          >
+            <input
+              type="number"
+              placeholder="Year"
+              aria-label="Jump year"
+              value={jumpYear}
+              onChange={(e) => setJumpYear(e.target.value)}
+              style={{ ...INPUT_STYLE, width: 45 }}
+            />
+            <input
+              type="number"
+              placeholder="Month"
+              aria-label="Jump month"
+              min={1}
+              max={12}
+              value={jumpMonth}
+              onChange={(e) => setJumpMonth(e.target.value)}
+              style={{ ...INPUT_STYLE, width: 45 }}
+            />
+            <input
+              type="number"
+              placeholder="Day"
+              aria-label="Jump day"
+              min={1}
+              max={31}
+              value={jumpDay}
+              onChange={(e) => setJumpDay(e.target.value)}
+              style={{ ...INPUT_STYLE, width: 45 }}
+            />
+            <input
+              type="number"
+              placeholder="Hour"
+              aria-label="Jump hour"
+              min={0}
+              max={23}
+              value={jumpHour}
+              onChange={(e) => setJumpHour(e.target.value)}
+              style={{ ...INPUT_STYLE, width: 45 }}
+            />
+            <button
+              style={{
+                ...BUTTON_BASE_STYLE,
+                minWidth: 55,
+                height: 24,
+                padding: "0 4px",
+                fontSize: 12,
+              }}
+              onClick={applyManualJump}
+            >
+              Go
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );
