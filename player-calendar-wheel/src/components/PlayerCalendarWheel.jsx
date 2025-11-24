@@ -65,7 +65,9 @@ const RING_DISTANCE_OFFSETS = {
   year: -3,
 };
 const HUB_SCALE = 2.0;
-const BACKDROP_SRC = "/background.png";
+const ASSET_BASE = import.meta.env.BASE_URL || "/";
+const BACKDROP_SRC = `${ASSET_BASE}background.png`;
+const SUN_MOON_SRC = `${ASSET_BASE}sunmoon.png`;
 const BACKDROP_SCALE = 2.75; // multiplier relative to SVG width
 const BACKDROP_OFFSET_X = -9.0;
 const BACKDROP_OFFSET_Y = 37.0;
@@ -611,7 +613,7 @@ export default function PlayerCalendarWheel({
               transition={{ type: "spring", stiffness: 120, damping: 12 }}
             >
               <image
-                href="/sunmoon.png"
+                href={SUN_MOON_SRC}
                 x={-hubR}
                 y={-hubR}
                 width={hubR * 2}
