@@ -304,7 +304,11 @@ export default function PlayerCalendarWheel({
     prevHourRef.current = hour;
   }, [hour]);
 
-  const bumpDay = (n) => setTotal((t) => t + n);
+  const bumpDay = (n) => {
+    setTotal((t) => t + n);
+    // Give the sun/moon hub a full rotation for each manual day step
+    setRotation((r) => r + 360 * n);
+  };
   const bumpHour = (n) => {
     setHour((h) => (h + n + 24) % 24);
     setRotation((r) => r + n * 15);
@@ -378,7 +382,8 @@ export default function PlayerCalendarWheel({
   const rings = useMemo(() => {
     const ml = monthLens(date.year)[date.month];
     const yearRingSlots = 12;
-    const yearMid = Math.floor(yearRingSlots / 2);
+    const yearIndex =
+      ((date.year % yearRingSlots) + yearRingSlots) % yearRingSlots;
     return [
       {
         key: "day",
@@ -444,9 +449,9 @@ export default function PlayerCalendarWheel({
         label: "Year",
         radius: radiusWithOffset("year", 5),
         thickness: THICKNESS * 0.7,
-        currentIndex: yearMid,
+        currentIndex: yearIndex,
         segments: Array.from({ length: yearRingSlots }, (_, i) => ({
-          name: `${date.year + (i - yearMid)}`,
+          name: `${date.year + (i - yearIndex)}`,
         })),
       },
     ];
