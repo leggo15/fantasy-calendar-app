@@ -2697,7 +2697,7 @@
     "events": []
   },
   "113556": {
-    "party": "Start of the adventure.",
+    "party": "Start of the adventure.\n\nKing:\nSummoned to resolve a crisis that can threaten the entire kingdom.\n",
     "events": []
   },
   "113557": {
@@ -2821,6 +2821,270 @@
     "events": []
   },
   "112964": {
+    "party": "",
+    "events": []
+  },
+  "112966": {
+    "party": "Initiative:\nrats: 24\nMilos: 14\ngeppero\nrati\nRadan\nBrouk\n\nRaticusMaximusOgrusMutante (Rat ogre)\n\nRaticus's Hilt (Poison's the surounding 5ft)",
+    "events": []
+  },
+  "113521": {
+    "party": "",
+    "events": []
+  },
+  "110737": {
+    "party": "",
+    "events": []
+  },
+  "110738": {
+    "party": "",
+    "events": []
+  },
+  "110739": {
+    "party": "",
+    "events": []
+  },
+  "110740": {
+    "party": "",
+    "events": []
+  },
+  "110741": {
+    "party": "",
+    "events": []
+  },
+  "110742": {
+    "party": "",
+    "events": []
+  },
+  "110743": {
+    "party": "",
+    "events": []
+  },
+  "110744": {
+    "party": "",
+    "events": []
+  },
+  "110745": {
+    "party": "",
+    "events": []
+  },
+  "110746": {
+    "party": "",
+    "events": []
+  },
+  "110747": {
+    "party": "",
+    "events": []
+  },
+  "110748": {
+    "party": "",
+    "events": []
+  },
+  "110749": {
+    "party": "",
+    "events": []
+  },
+  "110750": {
+    "party": "",
+    "events": []
+  },
+  "110751": {
+    "party": "",
+    "events": []
+  },
+  "110752": {
+    "party": "",
+    "events": []
+  },
+  "110753": {
+    "party": "",
+    "events": []
+  },
+  "110754": {
+    "party": "",
+    "events": []
+  },
+  "110755": {
+    "party": "",
+    "events": []
+  },
+  "110756": {
+    "party": "",
+    "events": []
+  },
+  "110757": {
+    "party": "",
+    "events": []
+  },
+  "110758": {
+    "party": "",
+    "events": []
+  },
+  "110759": {
+    "party": "",
+    "events": []
+  },
+  "110760": {
+    "party": "",
+    "events": []
+  },
+  "110761": {
+    "party": "",
+    "events": []
+  },
+  "110762": {
+    "party": "",
+    "events": []
+  },
+  "110763": {
+    "party": "",
+    "events": []
+  },
+  "110764": {
+    "party": "",
+    "events": []
+  },
+  "110765": {
+    "party": "",
+    "events": []
+  },
+  "112029": {
+    "party": "",
+    "events": []
+  },
+  "112030": {
+    "party": "",
+    "events": []
+  },
+  "112031": {
+    "party": "",
+    "events": []
+  },
+  "112032": {
+    "party": "",
+    "events": []
+  },
+  "112033": {
+    "party": "",
+    "events": []
+  },
+  "112034": {
+    "party": "",
+    "events": []
+  },
+  "112035": {
+    "party": "",
+    "events": []
+  },
+  "112036": {
+    "party": "",
+    "events": []
+  },
+  "112037": {
+    "party": "",
+    "events": []
+  },
+  "112038": {
+    "party": "",
+    "events": []
+  },
+  "112039": {
+    "party": "",
+    "events": []
+  },
+  "112040": {
+    "party": "",
+    "events": []
+  },
+  "112041": {
+    "party": "",
+    "events": []
+  },
+  "112042": {
+    "party": "",
+    "events": []
+  },
+  "112043": {
+    "party": "",
+    "events": []
+  },
+  "112044": {
+    "party": "",
+    "events": []
+  },
+  "112045": {
+    "party": "",
+    "events": []
+  },
+  "112046": {
+    "party": "",
+    "events": []
+  },
+  "112047": {
+    "party": "",
+    "events": []
+  },
+  "112048": {
+    "party": "",
+    "events": []
+  },
+  "112050": {
+    "party": "",
+    "events": []
+  },
+  "112051": {
+    "party": "",
+    "events": []
+  },
+  "112052": {
+    "party": "",
+    "events": []
+  },
+  "112053": {
+    "party": "",
+    "events": []
+  },
+  "112054": {
+    "party": "",
+    "events": []
+  },
+  "112055": {
+    "party": "",
+    "events": []
+  },
+  "112056": {
+    "party": "",
+    "events": []
+  },
+  "112057": {
+    "party": "",
+    "events": []
+  },
+  "112058": {
+    "party": "",
+    "events": []
+  },
+  "112059": {
+    "party": "",
+    "events": []
+  },
+  "112060": {
+    "party": "",
+    "events": []
+  },
+  "112061": {
+    "party": "",
+    "events": []
+  },
+  "112062": {
+    "party": "",
+    "events": []
+  },
+  "111924": {
+    "party": "",
+    "events": []
+  },
+  "111923": {
     "party": "",
     "events": []
   }

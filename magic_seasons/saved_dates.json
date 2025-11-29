@@ -10,5 +10,29 @@
     "m": 3,
     "d": 14,
     "total_days": 112966
+  },
+  "Return of the lich king": {
+    "y": 310,
+    "m": 7,
+    "d": 17,
+    "total_days": 113456
+  },
+  "Second banishemnt of the lich king": {
+    "y": 310,
+    "m": 10,
+    "d": 27,
+    "total_days": 113558
+  },
+  "First appearance of the Lich King": {
+    "y": 303,
+    "m": 3,
+    "d": 8,
+    "total_days": 110768
+  },
+  "First Banishment of the lich king": {
+    "y": 306,
+    "m": 5,
+    "d": 12,
+    "total_days": 111929
   }
 }
