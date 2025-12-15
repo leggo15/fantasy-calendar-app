@@ -2709,7 +2709,7 @@
     "events": []
   },
   "113559": {
-    "party": "",
+    "party": "Black hex\n\nForce Amplifier - doubles the damage but also the spell slots spent.\nCannon - 2d8 force damage\n\n\nRoad side encounter:\n\nBlack order Wizard 20 68\nBlack order Warlock 16 89\nMaya 5",
     "events": []
   },
   "113560": {
@@ -3085,6 +3085,110 @@
     "events": []
   },
   "111923": {
+    "party": "",
+    "events": []
+  },
+  "113563": {
+    "party": "",
+    "events": []
+  },
+  "113562": {
+    "party": "Gepetto host hp: 64\nhost str: 17\n\n\nInitiative:\nHallbrand\nBrouk\nRevian\nGepetto 64hp\nMaya Fortun\nra'ti\nHorn of Anor Gang member 2 0hp \nBlack Order cultist 61hp cannon: 3d8 1/5 focus \nHorn of Anor Gang member 1 47hp \n",
+    "events": []
+  },
+  "113564": {
+    "party": "",
+    "events": []
+  },
+  "113565": {
+    "party": "",
+    "events": []
+  },
+  "113566": {
+    "party": "",
+    "events": []
+  },
+  "113567": {
+    "party": "",
+    "events": []
+  },
+  "113570": {
+    "party": "",
+    "events": []
+  },
+  "113577": {
+    "party": "",
+    "events": []
+  },
+  "113584": {
+    "party": "",
+    "events": []
+  },
+  "113585": {
+    "party": "",
+    "events": []
+  },
+  "113586": {
+    "party": "",
+    "events": []
+  },
+  "113587": {
+    "party": "",
+    "events": []
+  },
+  "113583": {
+    "party": "",
+    "events": []
+  },
+  "113582": {
+    "party": "",
+    "events": []
+  },
+  "113581": {
+    "party": "",
+    "events": []
+  },
+  "113580": {
+    "party": "",
+    "events": []
+  },
+  "113579": {
+    "party": "",
+    "events": []
+  },
+  "113578": {
+    "party": "",
+    "events": []
+  },
+  "113576": {
+    "party": "",
+    "events": []
+  },
+  "113575": {
+    "party": "",
+    "events": []
+  },
+  "113574": {
+    "party": "",
+    "events": []
+  },
+  "113573": {
+    "party": "",
+    "events": []
+  },
+  "113572": {
+    "party": "",
+    "events": []
+  },
+  "113571": {
+    "party": "",
+    "events": []
+  },
+  "113569": {
+    "party": "",
+    "events": []
+  },
+  "113568": {
     "party": "",
     "events": []
   }
