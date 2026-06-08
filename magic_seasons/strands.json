@@ -41,7 +41,7 @@
       "Mid_Effect": "Future-glimpsing spells die size increases one step or answer one extra question. \n Creatures add +1d4 to a failed save once per short rest.",
       "High_Effect": "Fate-bending spells are cast one level higher and ignore resistance. \ncritical hits occres on one extra number down."
     },
-    "8": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
+    "8": { "Name": "forming", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
     "9": { "Name": "", "Hidden": "No", "Description": "", "Low_Effect": "", "Mid_Effect": "", "High_Effect": "" },
     "10": {
       "Name": "Metal",
